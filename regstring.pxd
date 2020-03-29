@@ -8,13 +8,10 @@ cdef extern from "<list>" namespace "std":
     cdef cppclass list[string]:
         pass
 
-cdef extern from "src/regex_string.cpp":
+cdef extern from "regex_string.cpp":
     pass
 
-cdef extern from "src/log.cpp":
-    pass
-
-cdef extern from "src/regex_string.h":
+cdef extern from "regex_string.h":
     cdef cppclass regstring:
         regstring() except +
         bint parse_regex(string regex_str)
